@@ -5,10 +5,8 @@ import re
 
 app = Flask(__name__)
 
-
 def escape_markdown(text):
     return re.sub(r"([_*\[\]()~`>#+\-=|{}.!])", r"\\\1", text)
-
 
 def get_ifsc_details(ifsc_code):
     url = f"https://ifsc.razorpay.com/{ifsc_code}"
@@ -17,6 +15,7 @@ def get_ifsc_details(ifsc_code):
         return response.json()
     else:
         return {"error": "Failed to fetch IFSC details."}
+
 
 def trace_number(phone_number):
     url = "https://calltracer.in"
