@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request, jsonify
-from werkzeug.utils import quote  # Use the correct import
+from werkzeug.utils import quote  # Importing the correct function
 
 app = Flask(__name__)
 
@@ -10,9 +10,9 @@ def home():
 @app.route('/encode', methods=['POST'])
 def encode_url():
     data = request.json
-    url = data.get('url', '')
+    url = data.get('url', '')  # Retrieve URL from the request JSON
     if url:
-        encoded_url = quote(url)  # Encoding the URL with 'quote'
+        encoded_url = quote(url)  # URL encoding using quote
         return jsonify({'encoded_url': encoded_url})
     return jsonify({'error': 'No URL provided'}), 400
 
