@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InfoDigger</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 1rem 0;
+            text-align: center;
+        }
+        .container {
+            max-width: 600px;
+            margin: 2rem auto;
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            margin-bottom: 1rem;
+            color: #4CAF50;
+        }
+        form {
+            margin-bottom: 1.5rem;
+        }
+        input[type="text"] {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        footer {
+            text-align: center;
+            margin-top: 2rem;
+            font-size: 0.9rem;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>InfoDigger</h1>
+        <p>Your one-stop tool for OSINT tasks</p>
+    </header>
+    <div class="container">
+        <form action="/ifsc" method="POST">
+            <h2>IFSC Lookup</h2>
+            <input type="text" name="ifsc_code" placeholder="Enter IFSC Code" required>
+            <button type="submit">Lookup</button>
+        </form>
+        <form action="/phone" method="POST">
+            <h2>Phone Tracing</h2>
+            <input type="text" name="phone_number" placeholder="Enter Phone Number" required>
+            <button type="submit">Trace</button>
+        </form>
+        <form action="/whois" method="POST">
+            <h2>Domain WHOIS Lookup</h2>
+            <input type="text" name="domain" placeholder="Enter Domain" required>
+            <button type="submit">Lookup</button>
+        </form>
+    </div>
+    <footer>
+        <p>&copy; 2025 InfoDigger. Built with ❤️ by Davycipher</p>
+    </footer>
+</body>
+</html>
