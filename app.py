@@ -17,4 +17,4 @@ def encode_url():
     return jsonify({'error': 'No URL provided'}), 400
 
 if __name__ == "__main__":
-    app.run(debug=True)  # Ensure debug is on for easier troubleshooting on Railway
+    app.run(debug=True, host='0.0.0.0', port=8080)  # Set host and port to work on Railway
