@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request, jsonify
-from werkzeug.utils import quote  # Importing the correct function
+from werkzeug.utils import quote
 
 app = Flask(__name__)
 
@@ -17,4 +17,4 @@ def encode_url():
     return jsonify({'error': 'No URL provided'}), 400
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=True)  # Ensure debug is on for easier troubleshooting on Railway
